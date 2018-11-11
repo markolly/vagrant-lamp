@@ -11,7 +11,7 @@ echo '[bootstrap] Installing Puppet...'
 sudo /usr/bin/wget https://apt.puppetlabs.com/puppet5-release-xenial.deb >> /vagrant/vm_build.log 2>&1
 sudo /usr/bin/dpkg -i puppet5-release-xenial.deb >> /vagrant/vm_build.log 2>&1
 sudo /usr/bin/apt-get update >> /vagrant/vm_build.log 2>&1
-sudo /usr/bin/apt-get install puppet-agent=5.5.7* >> /vagrant/vm_build.log 2>&1
+sudo /usr/bin/apt-get install puppet-agent=5.5.8* >> /vagrant/vm_build.log 2>&1
 
 # Add jenkins-deploy user
 echo '[bootstrap] Adding jenkins-deploy user...'
