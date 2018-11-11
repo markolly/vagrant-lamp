@@ -15,11 +15,6 @@ File {
     mode  => '0644',
 }
 
-node default {
-  # All boxes get the base config
-  include baseconfig
-}
-
 # Install Apache/PHP/Mariadb client
 node 'lamp-app-vagrant' {
     include lamp::app
