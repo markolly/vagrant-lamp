@@ -1,5 +1,5 @@
 # Vagrant for testing LAMP puppet configuration
-This is a vagrant installation to test a puppet configuration for LAMP. It will create two boxes and install the puppet configuration.
+This is a vagrant installation to test a puppet configuration for LAMP on Ubuntu 1604. It will create two boxes and install the puppet configuration.
 
 ## Virtualbox
 This was tested on v5.2.8. Download VirtualBox Platform and VirtualBox Extension Pack from: Install virtualbox: https://www.virtualbox.org/wiki/Downloads
@@ -8,7 +8,7 @@ This was tested on v5.2.8. Download VirtualBox Platform and VirtualBox Extension
 The vagrant version used was v2.0.2. Vagrant can be downloaded from: https://www.vagrantup.com/downloads.html
 
 ## Installation
-Clone the repo and install required modules. 
+Clone the repo and install required modules.
 ```
 git clone git@github.com:markolly/vagrant-lamp.git
 cd vagrant-lamp
