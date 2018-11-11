@@ -1,7 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-# Vagrant Apache Tomcat
-#vagrant plugin install vagrant-vbguest
+# Vagrant LAMP
 
 # Version
 Vagrant.require_version ">= 1.8.1"
@@ -10,8 +9,8 @@ Vagrant.require_version ">= 1.8.1"
 VAGRANTFILE_API_VERSION = "2"
 
 nodes = [
-  { :hostname => 'lamp-app-vagrant', :ip => '192.168.0.42', :box => 'ubuntu/xenial64', :ram => 2048 },
-  { :hostname => 'lamp-db-vagrant',  :ip => '192.168.0.43', :box => 'ubuntu/xenial64', :ram => 2048 }
+  { :hostname => 'lamp-app-vagrant', :ip => '192.168.0.42', :box => 'markolly/ubuntu1604', :ram => 2048 },
+  { :hostname => 'lamp-db-vagrant',  :ip => '192.168.0.43', :box => 'markolly/ubuntu1604', :ram => 2048 }
 ]
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -19,7 +18,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   nodes.each do |node|
     config.vm.define node[:hostname] do |nodeconfig|
       nodeconfig.vm.box = node[:box]
-      nodeconfig.vm.box_version = "20171110.0.0"
       nodeconfig.vm.hostname = node[:hostname] + ".box"
       nodeconfig.vm.network :private_network, ip: node[:ip]
 
