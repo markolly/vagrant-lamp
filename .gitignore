@@ -5,5 +5,4 @@ Puppetfile.lock
 Gemfile.lock
 ubuntu-xenial-16.04-cloudimg-console.log
 .DS_Store
-puppet/modules
 vm_build.log
