@@ -9,7 +9,7 @@ class baseconfig {
   $timezone = 'Europe/London'
   $set_timezone = [$timezone]
   $set_timezone_file = '/etc/timezone'
-  $packages = ['htop','tree','unzip','vim']
+  $packages = ['curl','htop','tree','unzip','vim']
 
   case $::osfamily {
       /Debian/: {
