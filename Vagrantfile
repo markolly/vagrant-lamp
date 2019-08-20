@@ -9,8 +9,8 @@ Vagrant.require_version ">= 1.8.1"
 VAGRANTFILE_API_VERSION = "2"
 
 nodes = [
-  { :hostname => 'lamp-app-vagrant', :ip => '192.168.0.42', :box => 'markolly/ubuntu1604', :ram => 2048 },
-  { :hostname => 'lamp-db-vagrant',  :ip => '192.168.0.43', :box => 'markolly/ubuntu1604', :ram => 2048 }
+  { :hostname => 'lamp-app-vagrant', :ip => '192.168.0.42', :box => 'markolly/ubuntu1804', :ram => 2048 },
+  { :hostname => 'lamp-db-vagrant',  :ip => '192.168.0.43', :box => 'markolly/ubuntu1804', :ram => 2048 }
 ]
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -41,6 +41,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
       end
 
+      if Vagrant.has_plugin?("vagrant-vbguest")
+        config.vbguest.auto_update = false
+      end
       # Hack to make centos 7 box work with vagrant
       config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
